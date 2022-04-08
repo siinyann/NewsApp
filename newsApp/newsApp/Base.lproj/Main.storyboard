@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xpz-7y-Ii8">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="9fF-bs-qU1">
+            <objects>
+                <viewController storyboardIdentifier="idDetailsViewController" id="kYR-4Q-3SA" customClass="DetailsViewController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="veq-wU-n59">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No news was selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-XE-OLl">
+                                <rect key="frame" x="110" y="411.66666666666669" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fsk-cg-kuD">
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="049-Sr-f8g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fsk-cg-kuD" firstAttribute="top" secondItem="049-Sr-f8g" secondAttribute="top" id="1li-hg-6IR"/>
+                            <constraint firstAttribute="bottom" secondItem="Fsk-cg-kuD" secondAttribute="bottom" id="6m5-Zg-ord"/>
+                            <constraint firstItem="Egg-XE-OLl" firstAttribute="centerX" secondItem="veq-wU-n59" secondAttribute="centerX" id="WdZ-vH-AAn"/>
+                            <constraint firstItem="Fsk-cg-kuD" firstAttribute="trailing" secondItem="049-Sr-f8g" secondAttribute="trailing" id="WrN-dj-Tcg"/>
+                            <constraint firstItem="Fsk-cg-kuD" firstAttribute="leading" secondItem="049-Sr-f8g" secondAttribute="leading" id="iVw-fO-Oc0"/>
+                            <constraint firstItem="Egg-XE-OLl" firstAttribute="centerY" secondItem="veq-wU-n59" secondAttribute="centerY" id="q92-dZ-wlm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="msgLabel" destination="Egg-XE-OLl" id="bcf-cQ-ODc"/>
+                        <outlet property="webView" destination="Fsk-cg-kuD" id="Mz1-5k-Ewt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PL8-72-4r8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861.5384615384614" y="398.81516587677726"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="2vB-6d-a6Q">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="yXY-uU-bUI" customClass="NewsTableViewController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qx9-3T-6Bf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Oik-vP-cRf" rowHeight="80" style="IBUITableViewCellStyleDefault" id="Tme-cR-zpu" userLabel="Cell">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tme-cR-zpu" id="emK-3z-GoL">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oik-vP-cRf">
+                                            <rect key="frame" x="20" y="0.0" width="350" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yXY-uU-bUI" id="5u9-8i-7lO"/>
+                            <outlet property="delegate" destination="yXY-uU-bUI" id="nHO-Pd-Bdk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="X7e-Lv-1kW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e33-3Y-ggO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="-207"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ptw-Jy-kdS">
+            <objects>
+                <navigationController id="ekO-ca-sMN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KY0-4x-fGO">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yXY-uU-bUI" kind="relationship" relationship="rootViewController" id="7nO-RG-YPP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Gs-5o-kUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-207"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="fih-Ds-JDE">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="xpz-7y-Ii8" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="ekO-ca-sMN" kind="relationship" relationship="masterViewController" id="SVO-fJ-5Hx"/>
+                        <segue destination="kYR-4Q-3SA" kind="relationship" relationship="detailViewController" id="lxP-om-WjT"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66c-LO-5Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
