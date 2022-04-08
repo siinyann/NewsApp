@@ -1,3 +1,3 @@
 # NewsApp
 
-Swift Pratical for a News App
+Swift Practical for a News App
